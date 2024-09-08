@@ -27,12 +27,13 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'My Collections',
+          'Lambo Pokemon Collections',
         ),
+        backgroundColor: Colors.orange[400],
         actions: const [
           Padding(
             padding: EdgeInsets.only(right: 8.0),
-            child: Icon(Icons.search),
+            child: Icon(Icons.account_circle_outlined),
           ),
         ],
         elevation: 4,
@@ -57,6 +58,21 @@ class _HomeScreenState extends State<HomeScreen> {
             },
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.amber[700],
+        items: <BottomNavigationBarItem>[
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.home, color: Colors.white),
+            label: 'Home',
+          ),
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.catching_pokemon),
+            label: 'Pokemon',
+          ),
+        ],
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.black,
       ),
     );
   }

@@ -27,6 +27,7 @@ class _CheckBoxState extends State<CheckBox> {
           widget.pokemon.isChecked
               ? Icons.check_box_outlined
               : Icons.check_box_outline_blank,
+          color: widget.pokemon.isChecked ? Colors.amber[700] : Colors.grey,
         ),
       ),
     );
